@@ -1,18 +1,18 @@
-class GoogleSearch {
+class YahooSearch {
   
     open (){
-        return browser.url('https://google.com');  
+        return browser.url('https://www.yahoo.com/');  
     }
     
     get inputSearch(){
-        return $('[name="q"]');
+        return $('#ybar-sbq');
     }
     get  buttonSearch(){
-     return $('[name="btnK"]');
+     return $('[value="Search"]');
     }
     async search (phrase) {
         await (await this.inputSearch).setValue(phrase);
         await (await this.buttonSearch).click();
     }
 }
-export default new GoogleSearch();
+export default new YahooSearch();

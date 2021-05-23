@@ -1,18 +1,18 @@
-class GoogleSearch {
+class YndexSearch {
   
     open (){
-        return browser.url('https://google.com');  
+        return browser.url('https://www.yandex.com/');  
     }
     
     get inputSearch(){
-        return $('[name="q"]');
+        return $('#text');
     }
     get  buttonSearch(){
-     return $('[name="btnK"]');
+     return $('[role="img"]');
     }
     async search (phrase) {
         await (await this.inputSearch).setValue(phrase);
         await (await this.buttonSearch).click();
     }
 }
-export default new GoogleSearch();
+export default new YndexSearch();

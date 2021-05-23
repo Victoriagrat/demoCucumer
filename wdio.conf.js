@@ -24,11 +24,13 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './features/**/*.feature'
+    './features/**/*search.feature'
+     // './features/search.feature'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        // 'path/to/excluded/files'/ 
+       // features/login.feature';
     ],
     //
     // ============

@@ -1,14 +1,21 @@
-Feature: Validate search funnctionality on different platforms. 
-
+Feature: Validate search functionality on different platforms
+​
 Check google.com, yahoo.com, yandex.ru
+​
+Scenario: Verify google.com search
 
-  Scenario: Verify Google.com search
+Given I am on the google page
+When I search google for IT start
+Then I see the results provided by google
 
-    Given I am on the Google search page
-    When I search Google for IT start
-    Then I should see the results provided by Google
+Scenario: Verify yandex.ru search
 
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+Given I am on the yandex page
+When I search yandex for IT start
+Then I see the results provided by yandex
+
+Scenario: Verify yahoo.com search
+
+Given I am on the yahoo page
+When I search yahoo for IT start
+Then I see the results provided by yahoo
